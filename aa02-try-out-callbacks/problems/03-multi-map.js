@@ -22,15 +22,19 @@ console.log(result3); // hi!!!!!
 *******************************************************************************/
 
 function multiMap(val, n, cb) {
-  for (let el of val) {
-    console.log(newEl = cb(el))
+  let newVal = val
+  for (let i = 0; i < n; i++) {
+    newVal = cb(newVal);
   }
+  return newVal
 }
 
-let result3 = multiMap("hi", 5, function(s) {
+/*
+let result3 = multiMap("hi", 7, function(s) {
   return s + "!";
 });
 console.log(result3); // hi!!!!!
+*/
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
